@@ -40,6 +40,33 @@ echo $test1->getProperty('name');
 $test2 = Preferences::getInstance();
 echo $test2->getProperty('name');
 
+
+class Singleton {
+    private static $instance;
+    private $name;
+
+
+    private function __constract(){}
+    
+    public static function getInstance(){
+        if(!self::$instance){
+          self::$instance = new Singleton();
+        }
+        return self::$instance;
+    }
+    
+    public function setName($name){
+        $this->name = $name;
+    }
+    public function getName(){
+        return $this->name;
+    }
+}
+
+$name = Singleton::getInstance();
+$name->setName('alla');
+print_r($name->getName());
+
 echo '<br>';
 echo '<br>';
 echo "***********************************************************";

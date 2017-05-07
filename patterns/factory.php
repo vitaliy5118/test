@@ -14,7 +14,7 @@ abstract class ApptEncoder {
 class BloggsApptEncoder extends ApptEncoder {
 
     function encode() {
-        return 'Данные закодированы в формате BloggsСal <br>';
+        return 'Р”Р°РЅРЅС‹Рµ Р·Р°РєРѕРґРёСЂРѕРІР°РЅС‹ РІ С„РѕСЂРјР°С‚Рµ BloggsРЎal <br>';
     }
 
 }
@@ -22,7 +22,7 @@ class BloggsApptEncoder extends ApptEncoder {
 class MegaApptEncoder extends ApptEncoder {
 
     function encode() {
-        return 'Данные закодированы в формате MegaСal <br>';
+        return 'Р”Р°РЅРЅС‹Рµ Р·Р°РєРѕРґРёСЂРѕРІР°РЅС‹ РІ С„РѕСЂРјР°С‚Рµ MegaРЎal <br>';
     }
 
 }
@@ -37,7 +37,7 @@ abstract class CommsManager {
 class BloggsCommsManager extends CommsManager {
 
     function getHeaderText(){
-      return 'BloggsCal верхгий колонтитул <br>';  
+      return 'BloggsCal РІРµСЂС…РіРёР№ РєРѕР»РѕРЅС‚РёС‚СѓР» <br>';  
     }
 
     function getApptEncoder(){
@@ -45,7 +45,7 @@ class BloggsCommsManager extends CommsManager {
     }
 
     function getFooterText(){
-        return 'BloggsCal нижний колонтитул <br>';
+        return 'BloggsCal РЅРёР¶РЅРёР№ РєРѕР»РѕРЅС‚РёС‚СѓР» <br>';
     }
 }
 

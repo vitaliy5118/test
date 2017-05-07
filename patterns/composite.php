@@ -60,7 +60,7 @@ class LaserCannonUnit extends Unit {
 
 }
 
-//îáùèé êëàññ äëÿ ãðóïïèðîâêè þíèòîâ
+//Ð¾Ð±Ñ‰Ð¸Ð¹ ÐºÐ»Ð°ÑÑ Ð´Ð»Ñ Ð³Ñ€ÑƒÐ¿Ð¿Ð¸Ñ€Ð¾Ð²ÐºÐ¸ ÑŽÐ½Ð¸Ñ‚Ð¾Ð²
 class Army extends Unit {
 
     private $units = array();
@@ -88,22 +88,22 @@ class Army extends Unit {
 
 }
 
-//ñîçäàåì àðìèþ
+//ÑÐ¾Ð·Ð´Ð°ÐµÐ¼ Ð°Ñ€Ð¼Ð¸ÑŽ
 $main_army = new Army();
 
 $main_army->addUnit(new Archer());
 $main_army->addUnit(new LaserCannonUnit());
 
-//åùå àðìèþ
+//ÐµÑ‰Ðµ Ð°Ñ€Ð¼Ð¸ÑŽ
 $sub_army = new Army();
 $sub_army->addUnit(new Archer());
 $sub_army->addUnit(new Archer());
 $sub_army->addUnit(new Archer());
 
-//îáúåäèíÿåì àðìèè
+//Ð¾Ð±ÑŠÐµÐ´Ð¸Ð½ÑÐµÐ¼ Ð°Ñ€Ð¼Ð¸Ð¸
 $main_army->addUnit($sub_army);
 
-print_r("Aòàêóþùàÿ ñèëà: {$main_army->bombardStrenght()}");
+print_r("AÑ‚Ð°ÐºÑƒÑŽÑ‰Ð°Ñ ÑÐ¸Ð»Ð°: {$main_army->bombardStrenght()}");
 
 
 

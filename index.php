@@ -42,13 +42,15 @@ function initMap() {
 
 <?php
 echo 'Некоторая отладочная информация:';
-print_r($_FILES['myfile']);
+print_r($_FILES);
 
-echo '<pre>';
-$uploaddir = "/file/{$_FILES['myfile']['name']}";
-echo 'Некоторая отладочная информация: $uploaddir='.$uploaddir;
-echo 'Некоторая отладочная информация: $_FILES[myfile][tmp_name]='.$_FILES['myfile']['tmp_name'];
+$uploaddir = 'file/';
 
+$uploadfile = $uploaddir . basename($_FILES['myfile']['name']);
+
+print_r($uploadfile);
+
+        
 echo '<pre>';
 if (move_uploaded_file($_FILES['myfile']['tmp_name'], $uploadfile)) {
     echo "Файл корректен и был успешно загружен.\n";
@@ -58,4 +60,3 @@ if (move_uploaded_file($_FILES['myfile']['tmp_name'], $uploadfile)) {
 
 echo '<br>';
 
-?>
